@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    tools:context=".labtest.LabCheck">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/as_tb_scan"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorGreenButton"
+        android:elevation="4dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/result_bg"></RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_one"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/am_civ_upic"
+                app:civ_circle_background_color="@color/colorScanWhite"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorPurple"
+                android:scaleType="centerCrop"
+                android:src="@drawable/enterprise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/rr_ll_profile"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/am_tv_uname"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorScanWhite"
+                    android:text="San Miguel Corp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/am_tv_ucompany"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorScanWhite"
+                    android:text="Swine Dist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_below="@+id/ll_one"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:contentPadding="25dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                app:civ_circle_background_color="@color/colorScanWhite"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/pig_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <LinearLayout
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:fontFamily="@font/roboto"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorLightGrey"
+                                    android:text="Batch no. 92"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:fontFamily="@font/roboto"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorLightGrey"
+                                    android:text="16:23 11/11/19"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/am_ib_dots"
+                                android:background="@null"
+                                android:src="@drawable/ic_dots_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorGrey"
+                            android:text="Ante-Mortem Check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="left"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorGrey"
+                            android:text="Laboratory Test Check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <RadioGroup
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/roboto"
+                                android:textSize="20sp"
+                                android:text="Passed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <RadioButton
+                                android:checked="true"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/roboto"
+                                android:textSize="20sp"
+                                android:text="Condemned"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="left"
+                            android:fontFamily="@font/roboto"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorGrey"
+                            android:text="Laboratory Test Check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:background="@drawable/ll_background"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/pdf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <LinearLayout
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorLightGrey"
+                                    android:text="lab-test_no.92.pdf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:background="@null"
+                                android:src="@drawable/ic_dots_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="left"
+                            android:fontFamily="@font/roboto"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorGrey"
+                            android:text="Remarks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ll_background"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="15dp"
+                                android:layout_gravity="left"
+                                android:fontFamily="@font/roboto"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorGrey"
+                                android:text="Laboratory Result shows the meat is contaminated with E.coli, there for the said batch shall be disposed orderly."
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_gravity="right"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_round_green"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="Proceed"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorDarkWhite"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
